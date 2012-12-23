@@ -1,0 +1,9 @@
+== Working with Rabbitmq as standalone process running alongside your Rails
+
+The application focuses on subscribing to a set of events and updating databases and performing operations based on the incoming data.
+
+Though this could be run the same way as the publisherapp it makes more sense to run it as a separate process from the API by launching a separate process which loads the Rails environment and keeps the reactor on the main thread.
+
+Check <tt> script/rabbitmq.rb </tt>
+
+Launch the admin console from <tt> http://localhost:15672/ </tt> 
